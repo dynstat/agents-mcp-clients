@@ -31,8 +31,11 @@ def write_file(file_path: str, content: str) -> str:
 def list_directory(directory_path: str) -> str:
     """List files in a directory."""
     try:
+        # Get absolute path of the directory
+        abs_path = os.path.abspath(directory_path)
+        current_path = os.getcwd()
         files = os.listdir(directory_path)
-        return "\n".join(files)
+        return f"Current path: {current_path}\nCurrent directory: {abs_path}\n\nFiles:\n" + "\n".join(files)
     except Exception as e:
         return f"Error listing directory: {str(e)}"
 
