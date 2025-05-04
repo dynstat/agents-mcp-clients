@@ -1,8 +1,8 @@
 import asyncio
-import sys
+# import sys
 
 from mcp.types import TextContent, CallToolResult
-from uvicorn import Config  # Import Config for type hinting if needed, though not directly used for running here
+# from uvicorn import Config  # Import Config for type hinting if needed, though not directly used for running here
 
 from mcp import ClientSession
 # Only import the sse_client helper function
